@@ -16,4 +16,5 @@ def setOfWords2Vec(vocabList,inputSet):
         else:print("the word :%s is not in my Vacabulary!"%word)
     return returnVec
 def trainNB0(trainMatrix,trainCategory):
+    numTrainDocs=len(trainMatrix)
     pass

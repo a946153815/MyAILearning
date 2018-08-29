@@ -15,7 +15,9 @@ def setOfWords2Vec(vocabList,inputSet):
             returnVec[vocabList.index(word)]=1
         else:print("the word :%s is not in my Vacabulary!"%word)
     return returnVec
+    #贝里斯训练
 def trainNB0(trainMatrix,trainCategory):
     numTrainDocs=len(trainMatrix)
     print("test ")
+
     pass

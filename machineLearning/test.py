@@ -1,2 +1,5 @@
 import cvHelper
-cvHelper.lhx_CameraPreview()
+import bayes
+#cvHelper.lhx_CameraPreview()
+dataset,de=bayes.loadDataSet()
+print(dataset)

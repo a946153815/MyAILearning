@@ -1,3 +1,4 @@
+import numpy as np
 def loadDataSet():
     postingList=[['m','y','d','d','d','d','d'],['m','y','d','d','d','d','d'],['m','y','d','d','d','d','d'],['m','y','d','d','d','d','d'],['m','y','d','d','d','d','d'],['m','y','d','d','d','d','d']]
     classVec=[0,1,0,1,0,1]
@@ -18,6 +19,19 @@ def setOfWords2Vec(vocabList,inputSet):
     #贝里斯训练
 def trainNB0(trainMatrix,trainCategory):
     numTrainDocs=len(trainMatrix)
-    print("test ")
-
-    pass
+    numWords=len(trainMatrix[0])
+    pAbusive=sum(trainCategory)/float(numTrainDocs)
+    p0Num=np.zeros(numWords);p1Num=np.zeros(numWords)
+    p0Denom=0.0;p1Denom=0.0
+    for i in range(numTrainDocs):
+        if trainCategory[i]==1:
+            p1Num+=trainMatrix[i]
+            p1Denom+=sum(trainMatrix[i])
+        else:
+            p0Num+=trainMatrix[i]
+            p0Denom+=sum(trainMatrix[i])
+            pass
+        pass
+    p1Vect=p1Num/p1Denom
+    p0Vect=p0Num/p0Denom
+    return p0Vect,p1Vect,pAbusive

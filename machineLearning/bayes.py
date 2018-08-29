@@ -17,4 +17,5 @@ def setOfWords2Vec(vocabList,inputSet):
     return returnVec
 def trainNB0(trainMatrix,trainCategory):
     numTrainDocs=len(trainMatrix)
+    print("test")
     pass

@@ -55,7 +55,8 @@ def plotBestFit(wei):
     ax=fig.add_subplot(111)
     ax.scatter(xcord1,ycord1,s=30,c='red',marker='s')
     ax.scatter(xcord2,ycord2,s=30,c='green')
-    x=np.arange(-3.0,3.0,0.1)
+    x = np.arange(-3.0, 3.0, 0.1)
+    y = (-weights[0]-weights[1]*x)/weights[2]
     ax.plot(x,y)
     plt.xlabel('X1');plt.ylabel('x2');
     plt.show
@@ -63,10 +64,11 @@ def plotBestFit(wei):
 def stocGradAscent1(dataMatrix,classLabels,numIter=150):
     m,n=np.shape(dataMatrix)
     weights=np.ones(n)
-    for j in range(numIter): dataIndex=range(m)
+    for j in range(numIter):
+        dataIndex=list(range(m))
         for i in range(m):
             alpha=4/(1.0+j+i)+0.01
-            randIndex=int(random.uniform(0,len(dataIndex)))
+            randIndex=int(np.random.uniform(0,len(dataIndex)))
             h=sigmoid(sum(dataMatrix[randIndex]*weights))
             error=classLabels[randIndex]-h
             weights=weights+alpha*error*dataMatrix(randIndex)

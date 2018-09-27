@@ -5,7 +5,7 @@ from pandas import DataFrame, Series
 import bayes
 import cvHelper
 import logRegres
-
+import kNN
 #cvHelper.lhx_CameraPreview()
 #dataset,de=bayes.loadDataSet()
 #r=bayes.createVocabList(dataset)
@@ -28,3 +28,4 @@ print("\n")
 print(er)
 print("\n")
 print(0.001*m.transpose()*er)
+kNN.handwritingClassTest()

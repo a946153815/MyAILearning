@@ -1,0 +1,50 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>圆角练习</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style type="text/css">
+        .con{
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            margin: 50px auto 0;
+            position: relative;
+            border-radius: 10px;
+        }
+        .box{
+            width: 28px;
+            height: 28px;
+            text-align: center;
+            background-color: red;
+            line-height: 28px;
+            color: white;
+            position:absolute;
+            left: 80px;
+            top: -8px;
+            border-radius: 14px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#btn1").click(function(){
+                alert('你大爷！');
+                $('#box1').removeClass('box');
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="con">
+        <div class="box" id="box1">5</div>
+    </div>
+    <div>
+        <input type="button" name="hello" id="btn1" value="你好">
+    </div>
+</body>
+</html>

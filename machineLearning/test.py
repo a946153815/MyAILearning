@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from pandas import DataFrame, Series
-
+import tensorflow as tf
 import threading
 import time
 
@@ -48,6 +48,7 @@ def main():
     t1.start()
     while True:
         time.sleep(1)
-
+def tensorTest(parameter_list):
+        pass
 if __name__ == '__main__':
     main()

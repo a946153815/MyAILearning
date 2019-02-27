@@ -56,7 +56,7 @@ def autoNorm(dataSet):
 #图片转数组向量
 def img2vector(imgpath):
 	img=cv2.imread(imgpath)
-	img=cvHelper.lhx_local_threshold(img);
+	img=cvHelper.lhx_local_threshold(img)
 	returnVect=np.zeros((1,3600))
 	for i in range(60):
 		linestr=img[i]

@@ -23,7 +23,7 @@ def lhx_CameraPreview():
 		elif cv2.waitKey(2)  == ord('p'):
 			cap.release()
 			cv2.destroyAllWindows()
-			return gray;
+			return gray
 	# When everything done, release the capture
 	cap.release()
 	cv2.destroyAllWindows()
